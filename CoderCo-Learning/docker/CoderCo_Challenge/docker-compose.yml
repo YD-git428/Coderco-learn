@@ -1,0 +1,22 @@
+version: '3.8'  # Specify the version of Docker Compose
+
+services:
+  web:
+    image: "challenge23:multistage"
+    build: 
+      context: .                  # Current directory
+      dockerfile: Dockerfile       # Use this Dockerfile
+    ports:
+      - "7777:7777"                # Map port 7777 on the host to 7777 on the container
+    environment:
+      REDIS_HOST: redis            # Hostname for the Redis service
+      REDIS_PORT: 6379             # Default Redis port
+      REDIS_PASSWORD: my_paswd     # Optional Redis password
+    depends_on:
+      - redis                      # Ensure Redis starts before the web app
+
+  redis:
+    image: "redis:alpine"          # Use the official Redis image
+    ports:
+      - "6379:6379"                 # Map port 6379 on the host to Redis
+    command: ["redis-server", "--requirepass", "my_paswd"]
