@@ -30,12 +30,12 @@ jobs:
 
         - name: install dependencies
           run: |
-            cd .github/Chapter4
+            cd cicd1/.github/Chapter4
             python -m pip install --upgrade pip
             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         - name: run tests
           run: |
-            cd .github/Chapter4
+            cd cicd1/.github/Chapter4
             python -m unittest discover
           
         
