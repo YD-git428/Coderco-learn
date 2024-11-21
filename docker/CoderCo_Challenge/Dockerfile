@@ -1,18 +1,20 @@
-FROM python:3.8-slim as Build
+FROM python:3.8 AS build
 
 WORKDIR /app
 
-COPY requirements.txt .  
+COPY ./app.py .
 
-RUN pip install -r requirements.txt  
-
-COPY . .  
+RUN pip install redis flask --target=/dependencies
 
 FROM python:3.8-slim
 
 WORKDIR /app
 
-COPY --from=Build /app /app
+COPY --from=build /app/app.py .
+
+COPY --from=build /dependencies /dependencies
+
+ENV PYTHONPATH=/dependencies
 
 EXPOSE 7777
 
