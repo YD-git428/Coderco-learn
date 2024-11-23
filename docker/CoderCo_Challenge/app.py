@@ -2,13 +2,16 @@ from flask import Flask
 import redis
 import os
 import random
+from dotenv import load_dotenv  
+
+load_dotenv()
 
 app = Flask(__name__)
 
 # Redis connection details
 redis_host = os.getenv('REDIS_HOST', 'redis')
 redis_port = os.getenv('REDIS_PORT', 6379)
-redis_password = os.getenv('REDIS_PASSWORD', 'my_paswd')
+redis_password = os.getenv('REDIS_PASSWORD')
 
 r = redis.StrictRedis(
     host=redis_host,

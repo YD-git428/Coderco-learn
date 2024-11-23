@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY ./app.py .
 
-RUN pip install redis flask --target=/dependencies
+RUN pip install redis flask python-dotenv --target=/dependencies
 
 FROM python:3.8-slim
 
