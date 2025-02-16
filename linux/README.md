@@ -1,5 +1,30 @@
 # Linux `Command Line` - Full Guide
 
+## Table of Contents
+# Table of Contents
+
+1. [Introduction](#introduction)
+2. [Basic Commands](#basic-commands)
+3. [Working with Files](#working-with-files)
+4. [Navigating Directories](#navigating-directories)
+5. [Wildcard (*)](#wildcard-)
+6. [File Permissions](#file-permissions)
+   - [`chmod`](#chmod)
+   - [Binaries and Octal](#binaries-and-octal)
+   - [Combination of Octals and Rules](#combination-of-octals-and-rules)
+   - [Easier Alternatives](#easier-alternative-good-to-know)
+7. [User & Group Access](#user--group-access)
+   - [Adding a New User](#adding-a-new-user)
+   - [Groups](#groups)
+   - [File/Directory Ownership](#filedirectory-ownership)
+8. [Other Useful Commands](#other-useful-commands)
+9. [Essential Terms](#lets-understand-some-essential-terms)
+10. [The Linux File System](#the-linux-file-system)
+11. [Brief Overview of Environment Variables](#next-step-environment-variables)
+12. [Questions to Test Your Knowledge](#questions-to-test-your-knowledge)
+13. [Vim Text Editor](#vim-text-editor-important-to-know)
+
+
 ## Introduction
 
 Welcome to the world of Linux! This guide introduces essential commands and concepts you’ll need to start navigating the terminal and managing files. We’ll keep things simple and straightforward.
