@@ -315,15 +315,14 @@ We’ll cover environment variables in more detail later, but here’s a brief p
 
 #### This can be run by using `vi` command ---> e.g. `vi file.txt`
 
-Running this will let you see file contents in a e.g. script. 
+Running this will let you see inside of the file. 
 
 #### Navigation:
 
-- **press 'i' on keyboard=INSERT** - allows you to add contents 
-- **press 'v' (after you press 'esc') on keyboard=VISUAL**- allows you to *only* view 
-- **press 'esc'→':'→'q'=QUIT** - allows you to go back to the terminal
-- **press 'esc'→':'→'wq'=QUIT&SAVE** - allows you to save 
-    ##### *ending 'q' or 'wq' with an exclamation mark (!) will force the action which avoids any prompts that may block the process*
+- **Insert Mode**: Press `i`
+- **Visual Mode**: Press `v`
+- **Quit without saving**: `:q!`
+- **Save and Quit**: `:wq`
 
 #### On INSERT - You can run these following commands:
 
@@ -338,12 +337,12 @@ Running this will let you see file contents in a e.g. script.
 
 |Action|Effect
 |-|-|
-|'dd'| to **delete** a whole line
-| 'D'| to delete **up to** your cursor
-| 'yy'| to copy
-| 'p' | to paste
-| ':'→'[*line number*]'| to move to a specific line 
-| ':'→'/ '→[*word you're looking for*]| to search for a word within the file
+|`dd`| to **delete** a whole line
+| `D`| to delete **up to** your cursor
+| `yy`| to copy
+| `p` | to paste
+| `:`→`*line number*`| to move to a specific line 
+| `:`→`/`→`*word you're looking for*`| to search for a word within the file
 
 #### *We will revisit Vim in *Bash Scripting* AKA the less boring part of Linux so stay tuned!
 
