@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the world of Linux! This guide introduces essential commands and concepts you’ll need to start navigating the terminal and managing files. We’ll keep things simple, straightforward, and beginner-friendly.
+Welcome to the world of Linux! This guide introduces essential commands and concepts you’ll need to start navigating the terminal and managing files. We’ll keep things simple and straightforward.
 
 Before diving in, let’s define a few key terms:
 
