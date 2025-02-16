@@ -1,8 +1,0 @@
-#  - name: use secret
-#           run: echo "The secret is ${{ secrets.MY_SECRET_NAME }}"
-      
-      
-#         - name: use secret as env var
-#           run: echo "The secret is $MY_SECRET_NAME"
-#           env:
-#               MY_SECRET_NAME: ${{ secrets.MY_SECRET_NAME }}

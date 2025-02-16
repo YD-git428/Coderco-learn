@@ -1,4 +1,0 @@
-*.lock.hcl
-*.tfstate
-*LICENCE.txt
-*.exe
