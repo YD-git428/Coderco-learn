@@ -119,7 +119,7 @@ e.g. `MY/PATH/*` or `MY/PATH/*.txt` or `MY/PATH/file*`
 |**X**| permission for **some** users to execute|
 |**s**| to set a user-group ID on execution|
 
-#### These letters are the rules that have an effect on:
+#### This is a list of who these rules apply to:
 
 | Mode         |Effect                                                              |
 | ----------------- | ------------------------------------------------------------------ |
@@ -153,15 +153,15 @@ This is the simplified way to understand binaries and octals:
 
 I hope you noticed a pattern here. No? here's whats going on:
 
-So by now, we already know the meaning of r, w & x. In this case, binary numbers can either be 1 or 0 and it's arrangement is based on whether the letter is used or not. 
+So by now, we already know the meaning of r, w & x. In this case, binary numbers can either be 1 or 0 and it's arrangement is based on whether the letter (r,m or x) is used or not. 
 
-1=letter is visible 0=letter is missing. 
+1 = letter is visible 0 = letter is missing. 
 
 The octal, in this case, is more specific by showing the assigned number from 1-9 based on **which** letter is being used:
 
 r=4 w=2 x=1 -=0
 
-The sum section is simply the sum of the octal numbers used 
+The 'sum' section is simply the sum of the octal numbers used. 
 
 ### Combination of Octals and Rules 
 
@@ -211,7 +211,7 @@ Here's what to run to make a normal user a **superuser**:
 1. `exit` - to come back to admin
 2. `sudo usermod -aG sudo firstuser`
 3. `su -firstuser`
-*To test it out run: `sudo apt update`*
+*To test it out, run: `sudo apt update`*
 
 ## Groups
 
@@ -264,6 +264,20 @@ Here's what to run to make a normal user a **superuser**:
 
 ---
 
+## Lets understand some essential terms: 
+
+#### Shell - The layer between you and the core of the operating system (e.g. Windows, Linux, Mac)
+#### Programs - written by developers to complete specified tasks e.g. ls, cat or echo
+####  Binaries - The compiled version of these *programs* that the *shell* uses to know what to execute ~ these can be found in the `/bin` directory under root ( `/` )
+
+## The Linux File system
+
+#### `/dev` - holds device files e.g. disk player
+#### `/etc` - if im thinking configuration, I go to `etc`. 
+*It contains configuration files for your running shell, shell scripts, vim configuration and package manager configuration files like apt or yum* 
+#### `/lib` - where the Network Manager could be found or most things that are network-related
+#### `/usr` - where `/bin`, `/lib `and `/src` can be found (`/src` is where the raw code of installed applications are stored)
+
 ## Next Step: Environment Variables
 
 Once you're comfortable with basic commands, it's time to move to environment variables. These are used to store settings that influence the behaviour of processes or the shell itself.
@@ -295,22 +309,9 @@ We’ll cover environment variables in more detail later, but here’s a brief p
 
 ---
 
-## Lets understand some essential terms: 
-
-#### Shell - The layer between you and the core of the operating system (e.g. Windows, Linux, Mac)
-#### Programs - written by developers to complete specified tasks e.g. ls, cat or echo
-####  Binaries - The compiled version of these *programs* that the *shell* uses to know what to execute ~ these can be found in the `/bin` directory under root ( `/` )
-
-## The Linux File system
-
-#### `/dev` - holds device files e.g. disk player
-#### `/etc` - if im thinking configuration, I go to `etc`. 
-*It contains configuration files for your running shell, shell scripts, vim configuration and package manager configuration files like apt or yum* 
-#### `/lib` - where the Network Manager could be found or most things that are network-related
-#### `/usr` - where `/bin`, `/lib `and `/src` can be found (`/src` is where the raw code of installed applications are stored)
 
 
-## Vim Text Editor
+## Vim Text Editor: Important to know
 
 #### This can be run by using `vi` command ---> e.g. `vi file.txt`
 
@@ -344,7 +345,7 @@ Running this will let you see file contents in a e.g. script.
 | ':'→'[*line number*]'| to move to a specific line 
 | ':'→'/ '→[*word you're looking for*]| to search for a word within the file
 
-#### *We will revisit Vim in *Bash Scripting*
+#### *We will revisit Vim in *Bash Scripting* AKA the less boring part of Linux so stay tuned!
 
 
 ## Conclusion
