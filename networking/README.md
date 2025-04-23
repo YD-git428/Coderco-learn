@@ -1,4 +1,4 @@
-# Networking
+# Networking 
 
 #### A Group of Devices that share resources and information
 
@@ -169,3 +169,35 @@ Provides node-node data transfer - this is done by maintaining a reliable link b
 
 #### The 'End user Layer' 
 *The reason it's called this is because this layer is basically whatever you interact with as a user e.g. https for web search; ftp for file transfer; ssh for instance access etcetc.*
+
+## DNS
+
+*There's no better way to explain this than a step by step analogy!*
+
+### It all starts when you search something on your web browser...
+
+#### e.g. google.com
+
+1️⃣ A request is sent to this thing called a 𝐃𝐍𝐒 𝐑𝐞𝐬𝐨𝐥𝐯𝐞𝐫 (think of it like a your saved contacts list). 
+
+If it finds 𝐺𝑜𝑜𝑔𝑙𝑒.𝑐𝑜𝑚'𝑠 number (IP Address), then fantastic! 
+
+If not... 
+
+2️⃣ it passes on a 'query' to the 𝐃𝐍𝐒 𝐑𝐨𝐨𝐭 𝐬𝐞𝐫𝐯𝐞𝐫 (think of it like it's passing on the question to the big boss) 
+
+3️⃣ The 𝐃𝐍𝐒 𝐑𝐨𝐨𝐭 𝐬𝐞𝐫𝐯𝐞𝐫 (the big boss) then tells the resolver to ask the 𝐓𝐋𝐃 𝐍𝐚𝐦𝐞 𝐬𝐞𝐫𝐯𝐞𝐫 (the 𝑠𝑚𝑎𝑙𝑙𝑒𝑟 boss) to get the '.𝑐𝑜𝑚' bit. 
+
+4️⃣ Then the DNS Resolver does as its commanded. 
+
+5️⃣ The TLD server (smaller boss) tells the Resolver to ask the '𝐺𝑜𝑜𝑔𝑙𝑒.𝑐𝑜𝑚' 𝐀𝐮𝐭𝐡𝐨𝐫𝐢𝐭𝐚𝐭𝐢𝐯𝐞 𝐍𝐚𝐦𝐞 𝐒𝐞𝐫𝐯𝐞𝐫 (I know its a mouth full) 
+
+It's like one of the senior colleagues. 
+
+6️⃣ Again, the resolver does as its commanded. 
+
+7️⃣ The 'Senior Colleague'' then finds the IP Address for the website
+
+And the DNS Resolver then saves this information so that it can give a quicker response next time round. 
+
+8️⃣ 𝐺𝑜𝑜𝑔𝑙𝑒.𝑐𝑜𝑚 works!
